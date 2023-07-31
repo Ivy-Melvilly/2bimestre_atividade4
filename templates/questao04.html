@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>forma</title>
+</head>
+
+<body>
+  <h1>Que forma geométrica você gostaria de conhecer?</h1>
+  <img src="imagens/interrogacao.png" class="tam"><br>
+  <input type="text" id="forma">
+  <button type="button" id="action">Clique</button>
+  <script>
+    function mudarForma() {
+      var forma = document.getElementById("forma");
+      if (forma.value == "triangulo") {
+        document.querySelector('img').src = "imagens/triangulo.png";
+      } else if (forma.value == "quadrado") {
+        document.querySelector('img').src = "imagens/quadrado.png";
+      } else if (forma.value == "circulo") {
+        document.querySelector('img').src = "imagens/circulo.png";
+      } else {
+        document.querySelector('img').src = "imagens/interrogacao.png";
+        alert("forma inválida!")
+      }
+    }
+    document.querySelector('button').addEventListener('click', mudarForma);
+  </script>
+</body>
+
+</html>

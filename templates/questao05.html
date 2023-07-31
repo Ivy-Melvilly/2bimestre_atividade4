@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Galeria</title>
+  <script>
+    function imagens() {
+      var lista = ["imagens/bougainville.jpg", "imagens/camelia.jpg", "imagens/crisantemo.jpg", "imagens/flor-de-cerejeira.jpg", "imagens/hibisco.jpg", "imagens/hortensia.jpg", "imagens/lirio-do-vale.jpg", "imagens/lotus.jpg", "imagens/orquidea.jpg", "imagens/rosas.jpg"];
+      var idiv = document.querySelector('div');
+      for (i = 0; i < lista.length; i++) {
+        var foto = document.createElement("img");
+        foto.classList.add("tam");
+        foto.src = lista[i];
+
+        idiv.appendChild(foto);
+      }
+    }
+  </script>
+</head>
+
+<body onload="imagens()">
+  <div>
+
+  </div>
+
+</body>
+
+</html>
